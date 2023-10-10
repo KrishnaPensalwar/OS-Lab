@@ -1,0 +1,611 @@
+student@student:~$ echo $SHELL
+/bin/bash
+student@student:~/TA54$ echo "Hello World"
+Hello World
+
+student@student:~$ mkdir TA54
+student@student:~$ cd TA54
+student@student:~/TA54$ touch abc.txt
+student@student:~/TA54$ ls
+abc.txt
+student@student:~/TA54$ cat>>abc.txt
+Krishna Pensalwar
+
+
+
+^Z
+[1]+  Stopped                 cat >> abc.txt
+student@student:~/TA54$ cat abc.txt
+Krishna Pensalwar
+
+
+
+student@student:~/TA54$ cal 2023
+                            2023
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4            1  2  3  4  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   5  6  7  8  9 10 11  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  12 13 14 15 16 17 18  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  19 20 21 22 23 24 25  
+29 30 31              26 27 28              26 27 28 29 30 31     
+                                                                  
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1      1  2  3  4  5  6               1  2  3  
+ 2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30     
+30                                                                
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5                  1  2  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   3  4  5  6  7  8  9  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  10 11 12 13 14 15 16  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  17 18 19 20 21 22 23  
+23 24 25 26 27 28 29  27 28 29 30 31        24 25 26 27 28 29 30  
+30 31                                                             
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4                  1  2  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   3  4  5  6  7  8  9  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  10 11 12 13 14 15 16  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  17 18 19 20 21 22 23  
+29 30 31              26 27 28 29 30        24 25 26 27 28 29 30  
+                                            31 
+                                            
+                                                               
+student@student:~/TA54$ cal
+     July 2023        
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31              
+   
+student@student:~/TA54$ cal -m 4 2023
+     April 2023       
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30         
+           
+student@student:~/TA54$ cal -m 2
+   February 2023      
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28              
+                      
+                      
+student@student:~/TA54$ date
+Wednesday 19 July 2023 09:00:33 AM IST
+
+student@student:~/TA54$ date +%D
+07/19/23
+
+student@student:~/TA54$ date +%T
+09:01:36
+
+student@student:~/TA54$ date +"%H %M %S"
+09 05 36
+
+student@student:~/TA54$ mkdir -p TA54/Sample/pqr.txt
+student@student:~/TA54$ ls
+abc.txt  TA54
+
+
+student@student:~/TA54$ cp abc.txt pqr.txt
+student@student:~/TA54$ ls
+abc.txt  pqr.txt  TA54
+student@student:~/TA54$ cat pqr.txt
+Krishna Pensalwar
+
+
+
+student@student:~/TA54$ mv pqr.txt xyz.txt
+student@student:~/TA54$ ls
+abc.txt  TA54  xyz.txt
+student@student:~/TA54$ cat xyz.txt
+Krishna Pensalwar
+
+
+
+student@student:~/TA54$ rmdir -p TA54/Sample/pqr.txt
+student@student:~/TA54$ ls
+abc.txt  xyz.txt
+
+student@student:~/TA54$ ls -l
+total 8
+-rw-rw-r-- 1 student student 21 Jul 19 08:55 abc.txt
+-rw-rw-r-- 1 student student 21 Jul 19 09:10 xyz.txt
+
+student@student:~/TA54$ chmod 666 abc.txt
+student@student:~/TA54$ ls -l
+total 8
+-rw-rw-rw- 1 student student 21 Jul 19 08:55 abc.txt
+-rw-rw-r-- 1 student student 21 Jul 19 09:10 xyz.txt
+
+student@student:~/TA54$ wc abc.txt
+ 4  2 21 abc.txt
+ 
+student@student:~/TA54$ who
+student  tty2         2023-07-19 08:48 (tty2)
+student@student:~/TA54$ cat abc.txt xyz.txt > pqr.txt
+student@student:~/TA54$ cat pqr.txt
+Krishna Pensalwar
+
+
+
+Krishna Pensalwar
+
+
+
+student@student:~/TA54$ ls
+abc.txt  pqr.txt  xyz.txt
+
+student@student:~/TA54$ cat >pqr.txt
+1
+2
+3
+4
+7
+5
+9
+7
+^Z
+[2]+  Stopped                 cat > pqr.txt
+student@student:~/TA54$ cat pqr.txt
+1
+2
+3
+4
+7
+5
+9
+7
+
+student@student:~/TA54$ sort pqr.txt
+1
+2
+3
+4
+5
+7
+7
+9
+
+student@student:~/TA54$ uname
+Linux
+
+student@student:~/TA54$ pwd
+/home/student/TA54
+
+student@student:~/TA54$ uname -n
+student
+
+student@student:~/TA54$ uname -r
+5.19.0-46-generic
+
+student@student:~/TA54$ ps
+    PID TTY          TIME CMD
+   3604 pts/0    00:00:00 bash
+   4803 pts/0    00:00:00 cat
+   5664 pts/0    00:00:00 cat
+   6678 pts/0    00:00:00 ps
+student@student:~/TA54$ cat >sort.txt 
+1	abc	Pune
+2	pqr	Mumbai
+3	xyz	Nashik
+^Z
+[3]+  Stopped                 cat > sort.txt
+student@student:~/TA54$ cat sort.txt
+1	abc	Pune
+2	pqr	Mumbai
+3	xyz	Nashik
+student@student:~/TA54$ sort sort.txt
+1	abc	Pune
+2	pqr	Mumbai
+3	xyz	Nashik
+student@student:~/TA54$ cat >sort.txt 
+2       abc     Pune
+1	pqr	Mumbai
+^Z
+[4]+  Stopped                 cat > sort.txt
+student@student:~/TA54$ sort sort.txt
+1	pqr	Mumbai
+2	abc	Pune
+student@student:~/TA54$ sort -k 3  sort.txt
+1	pqr	Mumbai
+2	abc	Pune
+student@student:~/TA54$ cat >>sort.txt 
+3	xyz	Latur
+^Z
+[5]+  Stopped                 cat >> sort.txt
+student@student:~/TA54$ sort -k 3  sort.txt
+3	xyz	Latur
+1	pqr	Mumbai
+2	abc	Pune
+student@student:~/TA54$ cut -c 1 sort.txt
+2
+1
+3
+student@student:~/TA54$ ls
+abc.txt  pqr.txt  sort.txt  xyz.txt
+student@student:~/TA54$ cat abc.txt
+Krishna Pensalwar
+
+
+
+student@student:~/TA54$ cut -c 1-3 abc.txt
+Kri
+
+
+
+student@student:~/TA54$ cut -f 2 sort.txt
+abc
+pqr
+xyz
+student@student:~/TA54$ grep Pune sort.txt
+2	abc	Pune
+student@student:~/TA54$ grep pune sort.txt
+student@student:~/TA54$ grep -i pune sort.txt
+2	abc	Pune
+student@student:~/TA54$ grep -v pune sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ grep -v Pune sort.txt
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ grep -i -v Pune sort.txt
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ man grep
+student@student:~/TA54$ ps
+    PID TTY          TIME CMD
+   3604 pts/0    00:00:00 bash
+   4803 pts/0    00:00:00 cat
+   5664 pts/0    00:00:00 cat
+   6689 pts/0    00:00:00 cat
+   6699 pts/0    00:00:00 cat
+   6706 pts/0    00:00:00 cat
+   6756 pts/0    00:00:00 ps
+student@student:~/TA54$ ps -a
+    PID TTY          TIME CMD
+   1162 tty2     00:00:00 gnome-session-b
+   4803 pts/0    00:00:00 cat
+   5664 pts/0    00:00:00 cat
+   6689 pts/0    00:00:00 cat
+   6699 pts/0    00:00:00 cat
+   6706 pts/0    00:00:00 cat
+   6758 pts/0    00:00:00 ps
+student@student:~/TA54$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:01 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_kthread
+     12 ?        00:00:00 rcu_tasks_rude_kthread
+     13 ?        00:00:00 rcu_tasks_trace_kthread
+     14 ?        00:00:00 ksoftirqd/0
+     15 ?        00:00:03 rcu_preempt
+     16 ?        00:00:00 migration/0
+     17 ?        00:00:00 idle_inject/0
+     18 ?        00:00:00 kworker/0:1-events
+     19 ?        00:00:00 cpuhp/0
+     20 ?        00:00:00 cpuhp/1
+     21 ?        00:00:00 idle_inject/1
+     22 ?        00:00:00 migration/1
+     23 ?        00:00:00 ksoftirqd/1
+     25 ?        00:00:00 kworker/1:0H-events_highpri
+     26 ?        00:00:00 cpuhp/2
+     27 ?        00:00:00 idle_inject/2
+     28 ?        00:00:00 migration/2
+     29 ?        00:00:00 ksoftirqd/2
+     31 ?        00:00:00 kworker/2:0H-events_highpri
+     32 ?        00:00:00 cpuhp/3
+     33 ?        00:00:00 idle_inject/3
+     34 ?        00:00:00 migration/3
+     35 ?        00:00:00 ksoftirqd/3
+     37 ?        00:00:00 kworker/3:0H-events_highpri
+     38 ?        00:00:00 kdevtmpfs
+     39 ?        00:00:00 inet_frag_wq
+     40 ?        00:00:00 kauditd
+     41 ?        00:00:00 khungtaskd
+     43 ?        00:00:00 oom_reaper
+     45 ?        00:00:00 writeback
+     46 ?        00:00:00 kcompactd0
+     47 ?        00:00:00 ksmd
+     48 ?        00:00:00 khugepaged
+     49 ?        00:00:00 kintegrityd
+     50 ?        00:00:00 kblockd
+     51 ?        00:00:00 blkcg_punt_bio
+     53 ?        00:00:00 tpm_dev_wq
+     54 ?        00:00:00 ata_sff
+     55 ?        00:00:00 md
+     56 ?        00:00:00 edac-poller
+     57 ?        00:00:00 devfreq_wq
+     58 ?        00:00:00 watchdogd
+     59 ?        00:00:00 kworker/3:1H-events_highpri
+     61 ?        00:00:00 kswapd0
+     62 ?        00:00:00 ecryptfs-kthread
+     68 ?        00:00:00 kthrotld
+     75 ?        00:00:00 acpi_thermal_pm
+     76 ?        00:00:00 xenbus_probe
+     77 ?        00:00:00 vfio-irqfd-clea
+     79 ?        00:00:00 mld
+     80 ?        00:00:00 ipv6_addrconf
+     85 ?        00:00:00 kstrp
+     91 ?        00:00:00 zswap-shrink
+     92 ?        00:00:02 kworker/u9:0-i915_flip
+    138 ?        00:00:00 charger_manager
+    161 ?        00:00:00 kworker/2:1H-kblockd
+    188 ?        00:00:00 kworker/0:1H-events_highpri
+    192 ?        00:00:00 scsi_eh_0
+    193 ?        00:00:00 scsi_tmf_0
+    194 ?        00:00:00 scsi_eh_1
+    195 ?        00:00:00 scsi_tmf_1
+    196 ?        00:00:00 scsi_eh_2
+    197 ?        00:00:00 scsi_tmf_2
+    198 ?        00:00:00 scsi_eh_3
+    199 ?        00:00:00 scsi_tmf_3
+    200 ?        00:00:00 scsi_eh_4
+    201 ?        00:00:00 scsi_tmf_4
+    206 ?        00:00:00 kworker/1:1H-events_highpri
+    238 ?        00:00:00 jbd2/sda5-8
+    239 ?        00:00:00 ext4-rsv-conver
+    278 ?        00:00:00 systemd-journal
+    342 ?        00:00:01 systemd-udevd
+    370 ?        00:00:00 cryptd
+    403 ?        00:00:00 irq/27-mei_me
+    459 ?        00:00:00 card0-crtc0
+    460 ?        00:00:00 card0-crtc1
+    461 ?        00:00:00 card0-crtc2
+    618 ?        00:00:00 jbd2/sda6-8
+    619 ?        00:00:00 ext4-rsv-conver
+    657 ?        00:00:09 systemd-oomd
+    658 ?        00:00:00 systemd-resolve
+    659 ?        00:00:00 systemd-timesyn
+    701 ?        00:00:00 accounts-daemon
+    702 ?        00:00:00 acpid
+    705 ?        00:00:02 avahi-daemon
+    706 ?        00:00:00 cron
+    707 ?        00:00:00 dbus-daemon
+    708 ?        00:00:04 NetworkManager
+    735 ?        00:00:00 irqbalance
+    736 ?        00:00:00 networkd-dispat
+    737 ?        00:00:00 polkitd
+    738 ?        00:00:00 power-profiles-
+    739 ?        00:00:00 rsyslogd
+    741 ?        00:00:03 snapd
+    742 ?        00:00:00 switcheroo-cont
+    743 ?        00:00:00 systemd-logind
+    744 ?        00:00:00 thermald
+    747 ?        00:00:00 udisksd
+    748 ?        00:00:00 wpa_supplicant
+    755 ?        00:00:00 avahi-daemon
+    815 ?        00:00:00 ModemManager
+    829 ?        00:00:00 unattended-upgr
+    830 ?        00:00:01 containerd
+    834 ?        00:00:00 kworker/2:3-mm_percpu_wq
+    879 ?        00:00:00 sshd
+    882 ?        00:00:00 gdm3
+    899 ?        00:00:00 gdm-session-wor
+    901 ?        00:00:00 cupsd
+    915 ?        00:00:00 colord
+    944 ?        00:00:42 mongod
+    952 ?        00:00:00 kerneloops
+    954 ?        00:00:00 kerneloops
+    965 ?        00:00:02 snort
+    990 ?        00:00:00 dbus
+   1000 ?        00:00:00 cups-browsed
+   1020 ?        00:00:00 systemd
+   1031 ?        00:00:00 (sd-pam)
+   1041 ?        00:00:00 dbus
+   1099 ?        00:00:00 pipewire
+   1100 ?        00:00:00 pipewire-media-
+   1101 ?        00:00:00 pulseaudio
+   1106 ?        00:00:01 dockerd
+   1119 ?        00:00:00 gnome-keyring-d
+   1123 ?        00:00:00 rtkit-daemon
+   1127 tty2     00:00:00 gdm-wayland-ses
+   1129 ?        00:00:00 dbus-daemon
+   1162 tty2     00:00:00 gnome-session-b
+   1163 ?        00:00:00 gvfsd
+   1164 ?        00:00:00 xdg-document-po
+   1180 ?        00:00:00 xdg-permission-
+   1187 ?        00:00:00 fusermount3
+   1189 ?        00:00:00 gvfsd-fuse
+   1222 ?        00:00:53 mysqld
+   1263 ?        00:00:00 bluetoothd
+   1308 ?        00:00:01 tracker-miner-f
+   1319 ?        00:00:00 gnome-session-c
+   1333 ?        00:00:00 gnome-session-b
+   1380 ?        00:00:00 at-spi-bus-laun
+   1383 ?        00:01:35 gnome-shell
+   1391 ?        00:00:00 dbus-daemon
+   1405 ?        00:00:00 gvfs-udisks2-vo
+   1410 ?        00:00:00 gvfs-afc-volume
+   1416 ?        00:00:00 gvfs-mtp-volume
+   1420 ?        00:00:00 gvfs-goa-volume
+   1425 ?        00:00:00 goa-daemon
+   1551 ?        00:00:00 goa-identity-se
+   1556 ?        00:00:00 gvfs-gphoto2-vo
+   1573 ?        00:00:00 upowerd
+   2233 ?        00:00:00 snapd-desktop-i
+   2306 ?        00:00:00 snapd-desktop-i
+   2310 ?        00:00:00 xdg-desktop-por
+   2314 ?        00:00:10 xdg-desktop-por
+   2321 ?        00:00:00 gnome-shell-cal
+   2330 ?        00:00:00 dconf-service
+   2331 ?        00:00:00 evolution-sourc
+   2340 ?        00:00:07 packagekitd
+   2346 ?        00:00:00 gvfsd-trash
+   2357 ?        00:00:00 gjs
+   2359 ?        00:00:00 at-spi2-registr
+   2362 ?        00:00:00 sh
+   2364 ?        00:00:00 gsd-a11y-settin
+   2366 ?        00:00:07 ibus-daemon
+   2367 ?        00:00:00 gsd-color
+   2369 ?        00:00:00 gsd-datetime
+   2374 ?        00:00:00 gsd-housekeepin
+   2375 ?        00:00:00 gsd-keyboard
+   2376 ?        00:00:00 gsd-media-keys
+   2377 ?        00:00:00 gsd-power
+   2378 ?        00:00:00 gsd-print-notif
+   2379 ?        00:00:00 gsd-rfkill
+   2380 ?        00:00:00 gsd-screensaver
+   2381 ?        00:00:00 gsd-sharing
+   2382 ?        00:00:00 gsd-smartcard
+   2383 ?        00:00:00 gsd-sound
+   2384 ?        00:00:00 gsd-wacom
+   2452 ?        00:00:00 gsd-printer
+   2454 ?        00:00:00 gsd-disk-utilit
+   2457 ?        00:00:00 evolution-alarm
+   2501 ?        00:00:00 ibus-dconf
+   2504 ?        00:00:01 ibus-extension-
+   2510 ?        00:00:00 evolution-calen
+   2517 ?        00:00:00 ibus-portal
+   2526 ?        00:00:02 ibus-engine-sim
+   2530 ?        00:00:05 snap-store
+   2651 ?        00:00:00 xdg-desktop-por
+   2669 ?        00:00:00 evolution-addre
+   2693 ?        00:00:00 kworker/u9:1
+   2715 ?        00:00:00 gjs
+   2785 ?        00:00:00 gvfsd-metadata
+   2832 ?        00:00:00 fwupd
+   3585 ?        00:00:16 gnome-terminal-
+   3604 pts/0    00:00:00 bash
+   4454 ?        00:00:00 update-notifier
+   4803 pts/0    00:00:00 cat
+   5479 ?        00:00:00 seahorse
+   5480 ?        00:00:00 gnome-calendar
+   5570 ?        00:00:36 gedit
+   5664 pts/0    00:00:00 cat
+   5680 ?        00:00:00 gvfsd-network
+   5710 ?        00:00:21 chrome
+   5716 ?        00:00:00 cat
+   5717 ?        00:00:00 cat
+   5719 ?        00:00:00 chrome_crashpad
+   5721 ?        00:00:00 chrome_crashpad
+   5727 ?        00:00:00 chrome
+   5728 ?        00:00:00 chrome
+   5729 ?        00:00:00 nacl_helper
+   5732 ?        00:00:00 chrome
+   5742 ?        00:00:05 Xwayland
+   5749 ?        00:00:00 gsd-xsettings
+   5777 ?        00:00:00 ibus-x11
+   5795 ?        00:00:11 chrome
+   5800 ?        00:00:10 chrome
+   5828 ?        00:00:00 gvfsd-dnssd
+   5835 ?        00:00:00 chrome
+   5854 ?        00:00:01 kworker/1:1-mm_percpu_wq
+   6051 ?        00:00:00 chrome
+   6144 ?        00:00:00 chrome
+   6175 ?        00:00:41 chrome
+   6187 ?        00:00:00 chrome
+   6323 ?        00:00:00 gvfsd-recent
+   6338 ?        00:00:00 kworker/3:0-mm_percpu_wq
+   6424 ?        00:00:00 kworker/1:0
+   6482 ?        00:00:00 kworker/u8:0-events_power_efficient
+   6499 ?        00:00:00 kworker/2:0-mm_percpu_wq
+   6501 ?        00:00:00 kworker/3:1-cgroup_destroy
+   6617 ?        00:00:00 gjs
+   6652 ?        00:00:00 kworker/u8:2-events_power_efficient
+   6663 ?        00:00:00 kworker/0:0-events
+   6689 pts/0    00:00:00 cat
+   6699 pts/0    00:00:00 cat
+   6706 pts/0    00:00:00 cat
+   6725 ?        00:00:00 kworker/u8:1-events_unbound
+   6759 pts/0    00:00:00 ps
+student@student:~/TA54$ cat abc.txt | tr 'a-z' 'A-Z'
+KRISHNA PENSALWAR
+
+
+
+student@student:~/TA54$ cat abc.txt
+Krishna Pensalwar
+
+
+
+student@student:~/TA54$ head -n 2 sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+student@student:~/TA54$ tail -n 1 sort.txt
+3	xyz	Latur
+student@student:~/TA54$ head sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ cat >>sort.txt
+3	xyz	Latur^Z
+[6]+  Stopped                 cat >> sort.txt
+student@student:~/TA54$ cat \sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ cat sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ cat >>sort.txt
+3	xyz	Latur
+^Z
+[7]+  Stopped                 cat >> sort.txt
+student@student:~/TA54$ cat sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+3	xyz	Latur
+3	xyz	Latur
+student@student:~/TA54$ unique sort.txt
+Command 'unique' not found, but can be installed with:
+sudo apt install john
+student@student:~/TA54$ sudo apt install john
+[sudo] password for student: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libflashrom1 libftdi1-2
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  john-data
+The following NEW packages will be installed:
+  john john-data
+0 upgraded, 2 newly installed, 0 to remove and 199 not upgraded.
+Need to get 4,773 kB of archives.
+After this operation, 7,885 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 john-data all 1.8.0-4ubuntu3 [4,561 kB]
+23% [1 john-data 1,345 kB/4,561 kB 29%]                                                                                         92.8 kB/s 36s^Z
+[8]+  Stopped                 sudo apt install john
+student@student:~/TA54$ uniq sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+3	xyz	Latur
+student@student:~/TA54$ uniq -d sort.txt
+3	xyz	Latur
+student@student:~/TA54$ uniq -u sort.txt
+2	abc	Pune
+1	pqr	Mumbai
+student@student:~/TA54$ 
+
+
+
